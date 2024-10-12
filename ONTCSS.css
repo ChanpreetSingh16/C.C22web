@@ -1,12 +1,27 @@
 /*banner*/
 
-/*#ontubanv1290924{display:block}*/
+#ontubanv1290924{display:block}
 
 /*update dot*/
-/*#updbtdot{display:block;}*/
+#updbtdot{display:block;}
 
 /*update content*/
 
-/*#ontv1290924::after{
+#ontv1290924::after{
+	content:'Updated on 12th October 2024.';
+}
+
+
+/*121024*/
+/*banner*/
+
+/*#ontubanv1121024{display:block}*/
+
+/*update dot*/
+/*#updbtdot121024{display:block;}*/
+
+/*update content*/
+
+/*#ontv1121024::after{
 	content:'Updated hello';
 }*/
