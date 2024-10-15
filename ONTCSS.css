@@ -15,13 +15,28 @@
 /*121024*/
 /*banner*/
 
-/*#ontubanv1121024{display:block}*/
+#ontubanv1121024{display:block}
 
 /*update dot*/
-/*#updbtdot121024{display:block;}*/
+updbtdotv1121024{display:block;}
 
 /*update content*/
 
-/*#ontv1121024::after{
+#ontv1121024::after{
+	content:'Updated on 15th October 2024. Please download the Updated Website.';
+}
+
+
+/*151024*/
+/*banner*/
+
+/*#ontubanv1151024{display:block}*/
+
+/*update dot*/
+/*updbtdotv1151024{display:block;}*/
+
+/*update content*/
+
+/*#ontv1151024::after{
 	content:'Updated hello';
 }*/
