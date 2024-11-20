@@ -30,13 +30,13 @@
 /*151024*/
 /*banner*/
 
-/*#ontubanv1151024{display:block}*/
+#ontubanv1151024{display:block}
 
 /*update dot*/
-/*.updbtdotv1121024{display:block;}*/
+.updbtdotv1121024{display:block;}
 
 /*update content*/
 
-/*#ontv1151024::after{
-	content:'Updated hello';
-}*/
+#ontv1151024::after{
+	content:'This version of Website is out of date please download new version.';
+}
