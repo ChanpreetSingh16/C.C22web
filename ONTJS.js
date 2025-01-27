@@ -55,7 +55,7 @@ function usercheck() {
 	sfo();
 }
 function webvers() {
-	if(localStorage.getItem("webversion") === "ONW11V220.11.2025based_01_27.02.2025") {
+	if(localStorage.getItem("webversion") === "ONW11V220.11.2025based_02_27.01.2025") {
 		localStorage.setItem("webversstat", "Updated");
 	}
 	else{
