@@ -47,9 +47,18 @@ function sfo() {
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Please create User ID to continue.</div>";
 	 }
+	 webvers();
 }
 function usercheck() {
 	var id = document.getElementById("userID");
 	localStorage.setItem("userid", id.value);
 	sfo();
+}
+function webvers() {
+	if(localStorage.getItem("webversion") === "ONW11V220.11.2025based_01_27.01.2025") {
+		localStorage.setItem("webversstat", "Updated");
+	}
+	else{
+		localStorage.setItem("webversstat", "Out of Date");
+	}
 }
