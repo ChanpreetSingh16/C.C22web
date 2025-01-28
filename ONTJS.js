@@ -37,9 +37,9 @@ function sfo() {
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Kumesh!</div>";
 	 }
-	else if(id === "sahaj260125") {
-		 document.getElementById("normalId").style.display = "block";
-		 document.getElementById("specialId").style.display = "none";
+	else if(id === "#sahaj260125") {
+		 document.getElementById("normalId").style.display = "none";
+		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Sahajpreet Singh!</div>";
 	 }
 	 else{
