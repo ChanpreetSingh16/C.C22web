@@ -42,6 +42,21 @@
 }
 
 
+
+/*201124*/
+/*banner*/
+
+#ontubanv2201124{display:block}
+
+/*update dot*/
+.updbtdotv2201124{display:block;}
+
+/*update content*/
+
 #ontv2201124::after{
-	content:'Your Website is up to date!';
+	content:'This website outdated on 30th January 2025, please update it!';
+}
+
+#ontv2201124-2::after{
+	content:'Your Website is Up to Date.';
 }
