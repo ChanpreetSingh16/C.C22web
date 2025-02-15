@@ -54,7 +54,8 @@ function sfo() {
 		 document.getElementById("specialId").style.display = "none";
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "block";
-		 document.getElementById("usernotemain").innerHTML = "<div>Please create User ID to continue.</div>";
+		 document.getElementById("usernotemain").innerHTML = '<div style="background:rgba(255,0,0,.4);">Invalid User ID!</div><div>Please create User ID to continue.</div>';
+		 localStorage.removeItem("userid");
 	 }
 	document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
 	 webvers();
