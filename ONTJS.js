@@ -50,6 +50,13 @@ function sfo() {
 		 document.getElementById("useridcrtbt").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Sahajpreet Singh!</div>";
 	 }
+	else if(id === "") {
+		 document.getElementById("specialId").style.display = "none";
+		 document.getElementById("normalId").style.display = "none";
+		 document.getElementById("useridcrtbt").style.display = "block";
+		 document.getElementById("usernotemain").innerHTML = '<div>Please create User ID to continue.</div>';
+		 localStorage.setItem("userid", "");
+	}
 	 else{
 		 document.getElementById("specialId").style.display = "none";
 		 document.getElementById("normalId").style.display = "none";
