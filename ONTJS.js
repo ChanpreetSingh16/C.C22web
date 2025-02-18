@@ -66,6 +66,7 @@ function sfo() {
 	 }
 	document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
 	 webvers();
+	iconupd();
 }
 function usercheck() {
 	var id = document.getElementById("userID");
@@ -79,4 +80,12 @@ function webvers() {
 	else{
 		localStorage.setItem("webversstat", "Out of Date");
 	}
+}
+function iconupd() {
+	var icon = '<img src="icons/App%20icons/onno1.png"><br><font id="apppstp">ONLINE Notes</font>';
+
+	if(document.getElementById("appsbt").innerHTML === icon) {
+		document.getElementById("appsbt").innerHTML = '<img src="https://online2k23.github.io/ONLINE/onno2.png"><br><font id="apppstp">ONLINE Notes</font>';
+	}
+	else{}
 }
