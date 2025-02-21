@@ -65,6 +65,10 @@ function sfo() {
 		 localStorage.setItem("userid", "");
 	 }
 	document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
+	document.getElementById("moreapps").innerHTML = '<a href="https://online2k23.github.io/ONLINE/onlinenotes.html" target="_blank"><button id="appsbt" style="display:block;"><img src="icons/App%20icons/onno1.png"><br><font id="apppstp">ONLINE Notes</font></button></a>';document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
+	document.getElementById("scriptsrc1").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
+	document.getElementById("scriptsrc2").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
+	
 	 webvers();
 	iconupd();
 }
