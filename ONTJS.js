@@ -8,6 +8,18 @@ function sfo() {
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh!</div>";
 		 //document.getElementById("usernotemain").innerHTML = "<div>Hello<br><font>26/01/2025 12:00(IST)</font></div>";
 	 }
+	else if(id === "#chanm84ik4170325") {
+		 document.getElementById("specialId").style.display = "block";
+		 document.getElementById("normalId").style.display = "none";
+		 document.getElementById("useridcrtbt").style.display = "none";
+		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh!</div>";
+	 }
+	else if(id === "#2312130325170325") {
+		 document.getElementById("specialId").style.display = "block";
+		 document.getElementById("normalId").style.display = "none";
+		 document.getElementById("useridcrtbt").style.display = "none";
+		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Founder!</div>";
+	 }
 	else if(id === "#r14a260125") {
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
