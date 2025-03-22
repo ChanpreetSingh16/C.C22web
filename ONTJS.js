@@ -76,11 +76,13 @@ function sfo() {
 		 document.getElementById("usernotemain").innerHTML = '<div style="background:rgba(255,0,0,.4);">Invalid User ID!</div><div>Please create User ID to continue.</div>';
 		 localStorage.setItem("userid", "");
 	 }
-	document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
-	
+	notifycate();
 	 webvers();
 	iconupd();
 }
+function notifycate() {
+	document.getElementById("onweventmain").innerHTML = '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
+	}
 function usercheck() {
 	var id = document.getElementById("userID");
 	localStorage.setItem("userid", id.value);
