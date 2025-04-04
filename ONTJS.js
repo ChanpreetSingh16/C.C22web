@@ -1,5 +1,6 @@
 function sfo() {
-	var id = localStorage.getItem("userid");
+	var id;
+	checkWebScor();
 	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
 		 document.getElementById("specialId").style.display = "block";
@@ -79,6 +80,14 @@ function sfo() {
 	notifycate();
 	 webvers();
 	iconupd();
+}
+function checkWebScor() {
+	if(document.getElementById("thiswebscore").textContent === "7"){
+		id = localStorage.getItem("userid2");
+	}
+	else{
+		id = localStorage.getItem("userid");
+	}
 }
 function notifycate() {
 	document.getElementById("onweventmain").innerHTML = '<div>Getting an Update Very Soon! :)<br><br><font>Tue Apr 01 2025 19:39:08 GMT+0530 (India Standard Time)</font></div>';
