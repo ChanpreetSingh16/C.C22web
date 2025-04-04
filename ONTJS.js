@@ -1,5 +1,4 @@
 function sfo() {
-	var id, userid;
 	checkWebScor();
 	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
@@ -82,6 +81,7 @@ function sfo() {
 	iconupd();
 }
 function checkWebScor() {
+	var id, userid;
 	if(document.getElementById("thiswebscore").textContent === "7"){
 		id = localStorage.getItem("userid2");
 		userid = "userid2";
@@ -97,6 +97,7 @@ function notifycate() {
 }
 	
 function usercheck() {
+	checkWebScor();
 	var id2 = document.getElementById("userID");
 	localStorage.setItem(userid, id2.value);
 	sfo();
