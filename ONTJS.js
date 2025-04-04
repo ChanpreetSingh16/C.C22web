@@ -1,5 +1,5 @@
 function sfo() {
-	var id;
+	var id, userid;
 	checkWebScor();
 	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
@@ -68,14 +68,14 @@ function sfo() {
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "block";
 		 document.getElementById("usernotemain").innerHTML = '<div>Please create User ID to continue.</div>';
-		 localStorage.setItem("userid", "");
+		 localStorage.setItem(userid, "");
 	}
 	 else{
 		 document.getElementById("specialId").style.display = "none";
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "block";
 		 document.getElementById("usernotemain").innerHTML = '<div style="background:rgba(255,0,0,.4);">Invalid User ID!</div><div>Please create User ID to continue.</div>';
-		 localStorage.setItem("userid", "");
+		 localStorage.setItem(userid, "");
 	 }
 	notifycate();
 	 webvers();
@@ -84,9 +84,11 @@ function sfo() {
 function checkWebScor() {
 	if(document.getElementById("thiswebscore").textContent === "7"){
 		id = localStorage.getItem("userid2");
+		userid = "userid2";
 	}
 	else{
 		id = localStorage.getItem("userid");
+		userid = "userid";
 	}
 }
 function notifycate() {
@@ -95,8 +97,8 @@ function notifycate() {
 }
 	
 function usercheck() {
-	var id = document.getElementById("userID");
-	localStorage.setItem("userid", id.value);
+	var id2 = document.getElementById("userID");
+	localStorage.setItem(userid, id2.value);
 	sfo();
 }
 function webvers() {
