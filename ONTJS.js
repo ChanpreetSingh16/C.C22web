@@ -81,8 +81,7 @@ function sfo() {
 	iconupd();
 }
 function checkWebScor() {
-	var id, userid;
-	if(document.getElementById("thiswebscore").textContent === "7"){
+	if(localStorage.getItem("webscore") > 6){
 		id = localStorage.getItem("userid2");
 		userid = "userid2";
 	}
