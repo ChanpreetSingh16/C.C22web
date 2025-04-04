@@ -91,7 +91,7 @@ function checkWebScor() {
 	}
 }
 function notifycate() {
-	document.getElementById("onweventmain").innerHTML = '<div>Getting an Update Very Soon! :)<br><br><font>Tue Apr 01 2025 19:39:08 GMT+0530 (India Standard Time)</font></div>';
+	document.getElementById("onweventmain").innerHTML = '<div>Packup! Getting the Update on Sun Apr 06 2025(India Standard Time)<br><br><font>Fri Apr 04 2025 15:21:57 GMT+0530 (India Standard Time)</font></div>';
 	document.getElementById("onweventmain").innerHTML += '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';
 }
 	
