@@ -110,10 +110,8 @@ function webvers() {
 	}
 }
 function iconupd() {
-	var icon = '<img src="icons/App%20icons/onno1.png"><br><font id="apppstp">ONLINE Notes</font>';
-
-	if(document.getElementById("appsbt").innerHTML === icon) {
-		document.getElementById("appsbt").innerHTML = '<img src="https://online2k23.github.io/ONLINE/onno2.png"><br><font id="apppstp">ONLINE Notes</font>';
-	}
-	else{}
+	
+}
+function getLatestType() {
+	document.getElementById("typediv").innerHTML = "7";
 }
