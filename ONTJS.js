@@ -96,6 +96,7 @@ function notifycate() {
 	else{
 		document.getElementById("onweventmain").innerHTML = '<div>Website has been Updated! :)<br><br><font>Sun Apr 06 2025 10:03:15 GMT+0530 (India Standard Time)</font></div>';
 		document.getElementById("onweventmain").innerHTML += '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';	
+		document.getElementById("onwnote").getElementsByTagName("i").style.color = "#f33";
 	}
 }
 	
