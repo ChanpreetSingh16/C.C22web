@@ -57,7 +57,25 @@
 	content:'This website outdated on 30th January 2025, please update it!';
 }
 
+#onwnote i{color:#f33;}
+
+
+
+
+/*201124 - 2 - 06/04/2025*/
+/*banner*/
+
+#ontubanv2201124-2{display:block}
+
+/*update dot*/
+#updbtdotv2201124-2{display:block;}
+
+/*update content*/
+
 #ontv2201124-2::after{
+	content:'This website outdated on 06th April 2025, please update it using Web Linker!';
+}
+
+#ontv2201124-3::after{
 	content:'Your Website is Up to Date.';
 }
-#onwnote i{color:#f33;}
