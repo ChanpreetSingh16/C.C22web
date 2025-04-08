@@ -92,10 +92,13 @@ function checkWebScor() {
 	}
 }
 function notifycate() {
-	if(localStorage.getItem("webscore") > 6){}
+	if(localStorage.getItem("webscore") > 6){
+		document.getElementById("onweventmain").innerHTML = '<div>Feeling very disheartened, we want to announce that for approx. 2.5 years from 09.04.2025, our all services will be temporarily closed due to some unavoidable circumstances, we apologize for any inconvenience. :(<br><br><font>Tue Apr 08 2025 13:19:35 GMT+0530 (India Standard Time)</font></div>';
+	}
 	else{
-		document.getElementById("onweventmain").innerHTML = '<div>Website has been Updated! :)<br><br><font>Sun Apr 06 2025 10:03:15 GMT+0530 (India Standard Time)</font></div>';
-		document.getElementById("onweventmain").innerHTML += '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';	
+		document.getElementById("onweventmain").innerHTML = '<div>Feeling very disheartened, we want to announce that for approx. 2.5 years from 09.04.2025, our all services will be temporarily closed due to some unavoidable circumstances, we apologize for any inconvenience. :(<br><br><font>Tue Apr 08 2025 13:19:35 GMT+0530 (India Standard Time)</font></div>';
+		document.getElementById("onweventmain").innerHTML += '<div>Website has been Updated! :)<br><br><font>Sun Apr 06 2025 10:03:15 GMT+0530 (India Standard Time)</font></div>';
+		document.getElementById("onweventmain").innerHTML += '<div>Logo of ONLINE Notes has been changed. You can download it for your shortcuts by the following link:- <a href="https://online2k23.github.io/ONLINE/onno2.png" target="_blank">New Logo</a> <br><br><font>Wed Feb 05 2025 18:23:46 GMT+0530 (India Standard Time)</font></div>';		
 		document.getElementById("onwnote").getElementsByTagName("i").style.color = "#f33";
 	}
 }
