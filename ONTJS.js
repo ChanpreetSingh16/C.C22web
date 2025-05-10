@@ -5,6 +5,17 @@ function sfo() {
 	 webvers();
 	iconupd();
 }
+function checkWebScor() {
+	if(localStorage.getItem("webscore") > 6){
+		id = localStorage.getItem("userid2");
+		userid = "userid2";
+		document.getElementById("moreapps").innerHTML += '<a href="https://chanpreetsingh16.github.io/ONLINE/onconvert-6to7.html" target="_blank"><button id="appsbt" style="display:block;"><img src="https://chanpreetsingh16.github.io/ONLINE/ononlogo1.png"><br><font id="apppstp">ONLINE Converter</font></button></a>';
+	}
+	else{
+		id = localStorage.getItem("userid");
+		userid = "userid";
+	}
+}
 function sfo2(){
 	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
@@ -18,7 +29,7 @@ function sfo2(){
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "none";
-		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh! hello</div>";
+		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh!</div>";
 	 }
 	else if(id === "#2312130325170325") {
 		 document.getElementById("specialId").style.display = "block";
@@ -82,17 +93,6 @@ function sfo2(){
 		 document.getElementById("usernotemain").innerHTML = '<div style="background:rgba(255,0,0,.4);">Invalid User ID!</div><div>Please create User ID to continue.</div>';
 		 localStorage.setItem(userid, "");
 	 }
-}
-function checkWebScor() {
-	if(localStorage.getItem("webscore") > 6){
-		id = localStorage.getItem("userid2");
-		userid = "userid2";
-		document.getElementById("moreapps").innerHTML += '<a href="https://chanpreetsingh16.github.io/ONLINE/onconvert-6to7.html" target="_blank"><button id="appsbt" style="display:block;"><img src="https://chanpreetsingh16.github.io/ONLINE/ononlogo1.png"><br><font id="apppstp">ONLINE Converter</font></button></a>';
-	}
-	else{
-		id = localStorage.getItem("userid");
-		userid = "userid";
-	}
 }
 function notifycate() {
 	if(localStorage.getItem("webscore") > 6){
