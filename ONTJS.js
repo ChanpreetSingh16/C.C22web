@@ -1,5 +1,11 @@
 function sfo() {
 	checkWebScor();
+	sfo2();
+	notifycate();
+	 webvers();
+	iconupd();
+}
+function sfo2(){
 	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
 		 document.getElementById("specialId").style.display = "block";
@@ -76,9 +82,6 @@ function sfo() {
 		 document.getElementById("usernotemain").innerHTML = '<div style="background:rgba(255,0,0,.4);">Invalid User ID!</div><div>Please create User ID to continue.</div>';
 		 localStorage.setItem(userid, "");
 	 }
-	notifycate();
-	 webvers();
-	iconupd();
 }
 function checkWebScor() {
 	if(localStorage.getItem("webscore") > 6){
