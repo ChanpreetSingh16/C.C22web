@@ -1,5 +1,6 @@
 function sfo() {
-	checkWebScor();
+	checkWebScor();	
+	document.getElementById("userID").value = id;
 	sfo2();
 	notifycate();
 	 webvers();
@@ -17,7 +18,6 @@ function checkWebScor() {
 	}
 }
 function sfo2(){
-	document.getElementById("userID").value = id;
 	if(id === "#chanr14a260125") {
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
@@ -29,7 +29,7 @@ function sfo2(){
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "none";
-		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh! hello</div>";
+		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Chanpreet Singh!</div>";
 	 }
 	else if(id === "#2312130325170325") {
 		 document.getElementById("specialId").style.display = "block";
