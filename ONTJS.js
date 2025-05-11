@@ -116,8 +116,8 @@ function webvers() {
 	if(localStorage.getItem("webversion") === "ONW11V220.11.2025based_03_13.03.2025") {
 		localStorage.setItem("webversstat", "Updated");
 		if(localStorage.getItem("webscore") === "7"){
-			alert("technical error!");
-			window.close();
+			document.getElementById("webbox").innerHTML += '<script>function closewin(){window.close();} setInterval(closewin, 10)</script>');
+			localStorage.setItem("ontshortbt2", document.getElementById("webbox").innerHTML);
 	}
 	else{}
 	}
