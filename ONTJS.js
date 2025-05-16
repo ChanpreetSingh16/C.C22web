@@ -7,7 +7,12 @@ function sfo() {
 	iconupd();
 }
 function checkWebScor() {
-	if(localStorage.getItem("webscore") > 6){
+	if(localStorage.getItem("webscore") > 7){
+		id = localStorage.getItem("userid3");
+		userid = "userid3";
+		document.getElementById("moreapps").innerHTML += '<a href="https://chanpreetsingh16.github.io/ONLINE/onconvert-6to7.html" target="_blank"><button id="appsbt" style="display:block;"><img src="https://chanpreetsingh16.github.io/ONLINE/ononlogo1.png"><br><font id="apppstp">ONLINE Converter</font></button></a>';
+	}
+	else if(localStorage.getItem("webscore") > 6){
 		id = localStorage.getItem("userid2");
 		userid = "userid2";
 		document.getElementById("moreapps").innerHTML += '<a href="https://chanpreetsingh16.github.io/ONLINE/onconvert-6to7.html" target="_blank"><button id="appsbt" style="display:block;"><img src="https://chanpreetsingh16.github.io/ONLINE/ononlogo1.png"><br><font id="apppstp">ONLINE Converter</font></button></a>';
