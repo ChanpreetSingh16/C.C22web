@@ -118,6 +118,8 @@ document.oncontextmenu = (e) => { e.preventDefault();}
 <button onclick="dec()">Decrypt</button>
 <button onclick="document.getElementById('content').value = ''">Clear Input</button>
 <button onclick="document.getElementById('output').value = ''">Clear Output</button>
+<button onclick="paste()">Paste Clipboard text in Input</button>
+<button onclick="copy()">Copy Output</button>
 <textarea id="output" placeholder="Your Output will appear here"></textarea>
 <script>
 function encryptText2(text) {
@@ -165,6 +167,15 @@ function enc(){
 }                                     
 function dec(){	                      
 	document.getElementById("output").value = decryptText2(document.getElementById("content").value);
+}
+async function paste(){
+	const text = await navigator.clipboard.readText();
+	document.getElementById("content").value = text;
+}
+function copy() {
+  var copyout = document.getElementById("output");
+  navigator.clipboard.writeText(copyout.value);
+  alert("Export Text Copied!");
 }
 </script>
 <br><br>
