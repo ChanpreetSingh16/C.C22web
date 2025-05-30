@@ -1,0 +1,325 @@
+<!doctype html>
+<head>
+<title>ONLINE Encrypter-Decrypter | Confidential</title>
+<link rel="icon" href="https://chanpreetsingh16.github.io/C.C22web/ononlogo1.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;400;500;700&family=Quicksand:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+</head>
+<body onload="preset()">
+<script src="https://chanpreetsingh16.github.io/C.C22web/ONTJS.js"></script>
+<div id="main" style="display:none;">
+<div class="nav" id="navbar">
+<font>ONLINE Encrypter Decrypter</font>
+<script>
+function preset() {
+	savess();
+	checkpswd();
+	if(localStorage.getItem("onsttheme") === "light") {
+		document.body.classList.toggle("light");
+	}
+	else{}
+}
+function savess(){
+	if(sessionStorage.getItem("pswdcont")){}
+	else{
+		sessionStorage.setItem("pswdcont", 5);
+	}
+}
+function checkpswd(){
+    let attemptsLeft = Number(sessionStorage.getItem("pswdcont"));
+
+    if (attemptsLeft <= 0) {
+        alert("Wrong attempts limit crossed, closing the window");
+        window.close();
+        return; // Exit the function
+    }
+
+    var pass = prompt("Please Enter Password");
+
+    if (pass === null) {
+        document.getElementById("main").innerHTML = ""; // User cancelled prompt
+        return; // Exit the function
+    }
+
+    var pass2 = encryptText2(pass);
+
+    if (pass2 === "mrkx&6075") {
+        document.getElementById("main").style.display = "block";
+    } else {
+        alert("Wrong Password!");
+        sessionStorage.setItem("pswdcont", attemptsLeft - 1);
+        checkpswd(); // Recursive call for incorrect password
+    }
+}
+</script>
+<!--
+
+function checkpswd(){	
+	if(Number(sessionStorage.getItem("pswdcont")) > 0){
+		var pass = prompt("Please Enter Password");
+		var pass2 = encryptText2(pass);
+		if(pass2 === "mrkx&6075" ){
+			document.getElementById("main").style.display = "block";
+		}
+		else if(pass === null){
+			document.getElementById("main").innerHTML = "";
+		}
+		else if(Number(sessionStorage.getItem("pswdcont")) < 1){
+			alert("Wrong attemps limit crossed, closing the window");
+			window.close();
+		}
+		else{
+			alert("Wrong Password!");
+			sessionStorage.setItem("pswdcont", sessionStorage.getItem("pswdcont")-1);
+			checkpswd();
+		}
+	}
+	else{
+		if(Number(sessionStorage.getItem("pswdcont")) < 1){
+			alert("Wrong attemps limit crossed, closing the window");
+			window.close();
+		}
+		else{}
+	}
+}
+-->
+<script>
+document.onkeydown = (e) => {
+	if (e.keyCode == 123) {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+        e.preventDefault();
+    }
+    if (e.ctrlKey && e.key == 'U') {
+        e.preventDefault();
+    }
+}	
+document.oncontextmenu = (e) => { e.preventDefault();}
+</script>
+</div>
+<!--<input type="text" id="key" placeholder="Enter Encryption/Decryption Key" spellcheck="false" autocomplete="false" autofocus>--><br><br><br>
+<textarea id="content" placeholder="Enter Content"></textarea>
+<button onclick="enc()">Encrypt</button>
+<button onclick="dec()">Decrypt</button>
+<button onclick="document.getElementById('content').value = ''">Clear Input</button>
+<button onclick="document.getElementById('output').value = ''">Clear Output</button>
+<textarea id="output" placeholder="Your Output will appear here"></textarea>
+<script>
+function encryptText2(text) {
+  const encryptionMap2 = {
+    'a': 'k', 'b': 'l', 'c': 'm', 'd': 'n', 'e': 'o', 'f': 'p', 'g': 'q', 'h': 'r', 'i': 's', 'j': 't',
+    'k': 'u', 'l': 'v', 'm': 'w', 'n': 'x', 'o': 'y', 'p': 'z', 'q': 'a', 'r': 'b', 's': 'c', 't': 'd',
+    'u': 'e', 'v': 'f', 'w': 'g', 'x': 'h', 'y': 'i', 'z': 'j',
+    '0': '5', '1': '6', '2': '7', '3': '8', '4': '9', '5': '0', '6': '1', '7': '2', '8': '3', '9': '4', ')': '%', '!': '^', '@': '&', '#': '*', '$': '(', '%': ')', '^': '!', '&': '@', '*': '#', '(': '$'};
+
+  let encryptedText2 = "";
+  const lowerText2 = text.toLowerCase();
+
+  for (let i = 0; i < lowerText2.length; i++) {
+    const char = lowerText2[i];
+    if (encryptionMap2[char]) {
+      encryptedText2 += encryptionMap2[char];
+    } else {
+      encryptedText2 += char;
+    }
+  }
+  return encryptedText2;
+}
+function decryptText2(text) {
+  const decryptionMap2 = {
+    'k': 'a', 'l': 'b', 'm': 'c', 'n': 'd', 'o': 'e', 'p': 'f', 'q': 'g', 'r': 'h', 's': 'i', 't': 'j',
+    'u': 'k', 'v': 'l', 'w': 'm', 'x': 'n', 'y': 'o', 'z': 'p', 'a': 'q', 'b': 'r', 'c': 's', 'd': 't',
+    'e': 'u', 'f': 'v', 'g': 'w', 'h': 'x', 'i': 'y', 'j': 'z',
+    '0': '5', '1': '6', '2': '7', '3': '8', '4': '9', '5': '0', '6': '1', '7': '2', '8': '3', '9': '4', ')': '%', '!': '^', '@': '&', '#': '*', '$': '(', '%': ')', '^': '!', '&': '@', '*': '#', '(': '$'};
+
+  let decryptedText2 = "";
+  const lowerText2 = text.toLowerCase();
+
+  for (let i = 0; i < lowerText2.length; i++) {
+    const char = lowerText2[i];
+    if (decryptionMap2[char]) {
+      decryptedText2 += decryptionMap2[char];
+    } else {
+      decryptedText2 += char;
+    }
+  }
+  return decryptedText2;
+}
+function enc(){	
+	document.getElementById("output").value = encryptText2(document.getElementById("content").value);
+}                                     
+function dec(){	                      
+	document.getElementById("output").value = decryptText2(document.getElementById("content").value);
+}
+</script>
+<br><br>
+<div id="stamp" style=" color:var(--c1);">
+
+&#169;ONLINE2023 ; IMAGES & CONTENT MAY BE SUBJECT TO COPYRIGHT.<br>
+WEBSITE CODED ON - 07:52 pm Thursday, 29 May 2025 (IST). </div>
+
+</div>
+</div>
+</body>
+<style>
+:root{
+	--b1:rgb(3,3,3);
+	--b2:rgb(18,18,18);
+	--b3:rgb(40,40,40);
+	--b4:rgb(60,60,60);
+	--bo1:rgb(60,60,60);
+	--br1:rgba(0,0,0,.5);
+	--c1:#fff;
+	--s1:#000;
+}
+.light{
+	--b1:rgb(230,230,230);
+	--b2:rgb(205,205,205);
+	--b3:rgb(183,183,183);
+	--b4:rgb(163,163,163);
+	--bo1:rgb(120,120,120);
+	--br1:rgba(255,255,255,.5);
+	--c1:#000;
+	--s1:#000;
+}
+body{
+	background:var(--b1);
+}
+*{
+	font-family:quicksand;
+	cursor:context-menu;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	outline:none;
+}
+*::selection{
+	color:#fff;
+	background:rgba(0,0,0,.3);
+}
+.nav{
+	height:54px;
+	width:370px;
+	background:var(--b2);
+	/*backdrop-filter:blur(6px);*/
+	position: fixed;
+	top:10px;
+	left:50%;
+	transform:translate(-50%, 0);
+	/*display:block;
+	transition:background 0.15s;*/
+	border-radius:27px;
+}
+.nav font{
+	color:var(--c1);
+	line-height:54px;
+	float:left;
+	margin:0 0 0 18px;
+	font-size:25px;
+	font-weight:450;
+}
+input{
+	width:calc(100% - 30px);
+	height:30px;
+	margin:80px 0 0 10px;
+	outline:none;
+	cursor:text;
+	background:#000;
+	border:1px solid var(--bo1);
+	border-radius:15px;
+	text-indent:5px;
+	font-size:13px;
+	font-family:space mono;
+	caret-color:#fff;
+	color:#09c;
+}
+input::selection{
+	background:rgba(255,255,255,.3);
+}
+textarea{
+	width:calc(100% - 20px);
+	height:200px;
+	margin:15px 0 0 5px;
+	resize:none;
+	outline:none;
+	cursor:text;
+	background:#000;
+	border:1px solid var(--bo1);
+	border-radius:25px;
+	text-indent:15px;
+	line-height:25px;
+	font-size:13px;
+	font-family:space mono;
+	caret-color:#fff;
+	color:#f63;
+}
+textarea::selection{
+	background:rgba(255,255,255,.3);
+}
+button{
+	width:;
+	padding:0 12px;
+	margin:20px 0 0 5px; 
+	height:30px;
+	border:none;
+	outline:none;
+	border-radius:15px;
+	background:var(--b2);
+	color:var(--c1);
+	transition:0.2s;
+	font-size:16px;
+}
+button:hover{
+	background:var(--b3);
+}
+button:active{
+	background:var(--b4);
+}
+::-webkit-scrollbar{
+	width: 0px;
+    height: 0px;
+}
+::-webkit-scrollbar-track{
+	background:var(--b1);
+}
+::-webkit-scrollbar-thumb{
+	background: rgba(102, 102, 102,.8); 
+	border-radius:4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(51, 51, 51,.8);
+}
+@media only screen and (max-width:915px){
+	
+}
+@media only screen and (max-width:500px){	
+	
+}
+@media only screen and (max-width:400px){	
+	.nav font{
+		font-size:17px;
+		line-height:40px;
+		margin-left:15px;
+	}
+	.nav{
+		width:260px;
+		height:40px;
+	}
+}
+</style>
+</html>
