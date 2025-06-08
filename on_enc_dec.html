@@ -108,29 +108,43 @@ document.onkeydown = (e) => {
     if (e.ctrlKey && e.key == 'U') {
         e.preventDefault();
     }
+    if (e.ctrlKey && e.key == '6') {
+        e.preventDefault();
+		swap();
+    }
+    if (e.ctrlKey && e.shiftKey) {
+        e.preventDefault();
+		dec();
+    }
+    if (e.key == 'Enter') {
+        e.preventDefault();
+		enc();
+    }
 }	
 document.oncontextmenu = (e) => { e.preventDefault();}
 </script>
 </div>
 <!--<input type="text" id="key" placeholder="Enter Encryption/Decryption Key" spellcheck="false" autocomplete="false" autofocus>--><br><br><br>
-<textarea id="content" placeholder="Enter Content"></textarea>
-<button onclick="enc()">Encrypt</button>
-<button onclick="dec()">Decrypt</button>
-<button onclick="document.getElementById('content').value = ''">Clear Input</button>
-<button onclick="document.getElementById('output').value = ''">Clear Output</button>
-<button onclick="paste()">Paste Clipboard text in Input</button>
-<button onclick="copy()">Copy Output</button>
+<textarea id="content" placeholder="Enter Content" autofocus></textarea>
+<button onclick="enc()"><i class="material-symbols-outlined">password</i> Encrypt</button>
+<button onclick="dec()"><i class="material-symbols-outlined">lock_open_right</i> Decrypt</button>
+<button id="clallbt" onclick="document.getElementById('content').value = ''"><i class="material-symbols-outlined">delete</i> Clear Input</button>
+<button id="clallbt" onclick="document.getElementById('output').value = ''"><i class="material-symbols-outlined">delete</i> Clear Output</button>
+<button onclick="paste()"><i class="material-symbols-outlined">content_paste</i> Paste Clipboard text in Input</button>
+<button onclick="copy()"><i class="material-symbols-outlined">content_copy</i> Copy Output</button>
+<button onclick="swap()"><i class="material-symbols-outlined">swap_vert</i> Swap Input and Output</button>
+<button id="clallbt" onclick="clall()" accesskey="C"><i class="material-symbols-outlined">delete_forever</i> Clear All</button>
 <textarea id="output" placeholder="Your Output will appear here"></textarea>
 <script>
 function encryptText2(text) {
   const encryptionMap2 = {
-    'a': 'k', 'b': 'l', 'c': 'm', 'd': 'n', 'e': 'o', 'f': 'p', 'g': 'q', 'h': 'r', 'i': 's', 'j': 't',
+	'A': 'K', 'B': 'L', 'C': 'M', 'D': 'N', 'E': 'O', 'F': 'P', 'G': 'Q', 'H': 'R', 'I': 'S', 'J': 'T','K': 'U', 'L': 'V', 'M': 'W', 'N': 'X', 'O': 'Y', 'P': 'Z', 'Q': 'A', 'R': 'B', 'S': 'C', 'T': 'D','U': 'E', 'V': 'F', 'W': 'G', 'X': 'H', 'Y': 'I', 'Z': 'J','a': 'k', 'b': 'l', 'c': 'm', 'd': 'n', 'e': 'o', 'f': 'p', 'g': 'q', 'h': 'r', 'i': 's', 'j': 't',
     'k': 'u', 'l': 'v', 'm': 'w', 'n': 'x', 'o': 'y', 'p': 'z', 'q': 'a', 'r': 'b', 's': 'c', 't': 'd',
     'u': 'e', 'v': 'f', 'w': 'g', 'x': 'h', 'y': 'i', 'z': 'j',
     '0': '5', '1': '6', '2': '7', '3': '8', '4': '9', '5': '0', '6': '1', '7': '2', '8': '3', '9': '4', ')': '%', '!': '^', '@': '&', '#': '*', '$': '(', '%': ')', '^': '!', '&': '@', '*': '#', '(': '$'};
 
   let encryptedText2 = "";
-  const lowerText2 = text.toLowerCase();
+  const lowerText2 = text;
 
   for (let i = 0; i < lowerText2.length; i++) {
     const char = lowerText2[i];
@@ -175,7 +189,18 @@ async function paste(){
 function copy() {
   var copyout = document.getElementById("output");
   navigator.clipboard.writeText(copyout.value);
-  alert("Export Text Copied!");
+  alert("Text Copied!");
+}
+function clall(){
+	document.getElementById("content").value = "";
+	document.getElementById("output").value = "";
+}
+function swap(){
+	a = document.getElementById("content").value;
+	b = document.getElementById("output").value;
+	
+	document.getElementById("content").value = b;
+	document.getElementById("output").value = a;
 }
 </script>
 <br><br>
@@ -284,7 +309,7 @@ textarea::selection{
 }
 button{
 	width:;
-	padding:0 12px;
+	padding:0 12px 0 9px;
 	margin:20px 0 0 5px; 
 	height:30px;
 	border:none;
@@ -300,6 +325,23 @@ button:hover{
 }
 button:active{
 	background:var(--b4);
+}
+#clallbt{
+	background:rgb(180,0,0);
+	color:var(--c1);
+}
+#clallbt:hover{
+	background:rgb(255,35,35);
+}
+#clallbt:active{
+	background:rgb(130,0,0);
+}
+button .material-symbols-outlined{
+	float:left;
+	font-variation-settings:'FILL' 0, 'wght' 100, 'GRAD' 0, 'opsz' 24;
+	font-size:17px;
+	line-height:21px;
+	margin-right:5px;
 }
 ::-webkit-scrollbar{
 	width: 0px;
@@ -332,5 +374,6 @@ button:active{
 		height:40px;
 	}
 }
+
 </style>
 </html>
