@@ -42,12 +42,12 @@ function sfo2(){
 		 document.getElementById("useridcrtbt").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Founder!</div>";
 	 }
-	else if(id === "#r14a260125") {
+	/*else if(id === "#r14a260125") {
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
 		 document.getElementById("useridcrtbt").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Mahika!</div>";
-	 }
+	 }*/
 	else if(id === "#gursharan260125") {
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("normalId").style.display = "none";
@@ -83,6 +83,12 @@ function sfo2(){
 		 document.getElementById("specialId").style.display = "block";
 		 document.getElementById("useridcrtbt").style.display = "none";
 		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Sahajpreet Singh!</div>";
+	 }
+	else if(id === "#kshukla181225") {
+		 document.getElementById("normalId").style.display = "none";
+		 document.getElementById("specialId").style.display = "block";
+		 document.getElementById("useridcrtbt").style.display = "none";
+		 document.getElementById("usernotemain").innerHTML = "<div>Welcome Kushagar Shukla!</div>";
 	 }
 	else if(id === "") {
 		 document.getElementById("specialId").style.display = "none";
@@ -131,3 +137,4 @@ function iconupd() {
 function getLatestType() {
 	document.getElementById("typediv").innerHTML = "7";
 }
+
